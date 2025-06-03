@@ -1,0 +1,93 @@
+{
+  "users": {
+    "userId": {
+      "role": "worker | employer | admin",
+      "phoneNumber": "+919876543210",
+      "name": "string",
+      "skills": ["string"],
+      "experience": "string",
+      "languages": ["string"],
+      "preferences": {
+        "location": "string",
+        "jobType": "string"
+      },
+      "emergencyContacts": [
+        {
+          "name": "string",
+          "phone": "+919876543210",
+          "email": "string"
+        }
+      ],
+      "resumeUrl": "string",
+      "createdAt": "timestamp",
+      "updatedAt": "timestamp"
+    }
+  },
+  "jobs": {
+    "jobId": {
+      "title": "string",
+      "description": "string",
+      "location": "string",
+      "skillsRequired": ["string"],
+      "duration": "string",
+      "employerId": "userId",
+      "contactInfo": {
+        "phone": "+919876543210",
+        "email": "string"
+      },
+      "createdAt": "timestamp",
+      "updatedAt": "timestamp"
+    }
+  },
+  "applications": {
+    "applicationId": {
+      "jobId": "jobId",
+      "workerId": "userId",
+      "status": "applied | accepted | rejected",
+      "appliedAt": "timestamp"
+    }
+  },
+  "messages": {
+    "conversationId": {
+      "participants": ["userId"],
+      "messages": [
+        {
+          "senderId": "userId",
+          "text": "string",
+          "timestamp": "timestamp"
+        }
+      ]
+    }
+  },
+  "calls": {
+    "callId": {
+      "callerId": "userId",
+      "receiverId": "userId",
+      "timestamp": "timestamp",
+      "duration": "number",
+      "status": "completed | missed | declined"
+    }
+  },
+  "governmentSchemes": {
+    "schemeId": {
+      "title": {
+        "en": "string",
+        "te": "string"
+      },
+      "description": {
+        "en": "string",
+        "te": "string"
+      },
+      "applyUrl": "string"
+    }
+  },
+  "notifications": {
+    "notificationId": {
+      "userId": "userId",
+      "type": "job_match | resume_downloaded | scheme_available | emergency_ack",
+      "message": "string",
+      "read": "boolean",
+      "createdAt": "timestamp"
+    }
+  }
+}
